@@ -326,10 +326,6 @@ public class AverageCarTest {
         averageCar.gas(2);
         averageCar.drive(5);
         averageCar.turnOnHeadlights();
-        System.out.println(averageCar.checkDashboard());
-        System.out.println("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10
-                + ", totalDistance="
-                + 650 + ", distanceFromHome=" + 50 + ", currentGear=" + GEAR.FORWARD);
         assertEquals("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10
                 + ", totalDistance="
                 + 650 + ", distanceFromHome=" + 50 + ", currentGear=" + GEAR.FORWARD, averageCar.checkDashboard());
