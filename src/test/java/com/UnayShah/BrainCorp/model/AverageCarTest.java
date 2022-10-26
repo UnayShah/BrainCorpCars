@@ -39,30 +39,30 @@ public class AverageCarTest {
 
     @Test
     public void testSetSpeedCarOff() {
-        assertEquals(0, averageCar.getSpeed());
-        averageCar.setSpeed(10);
+        assertEquals(0.0, averageCar.getSpeed());
+        averageCar.setSpeed(10.0);
         assertEquals(0, averageCar.getSpeed());
     }
 
     @Test
     public void testSetSpeed() {
         averageCar.turnOn();
-        averageCar.setSpeed(10);
-        assertEquals(10, averageCar.getSpeed());
+        averageCar.setSpeed(10.0);
+        assertEquals(10.0, averageCar.getSpeed());
     }
 
     @Test
     public void testSetSpeedExceed() {
         averageCar.turnOn();
-        averageCar.setSpeed(100);
-        assertEquals(50, averageCar.getSpeed());
+        averageCar.setSpeed(100.0);
+        assertEquals(50.0, averageCar.getSpeed());
     }
 
     @Test
     public void testSetSpeedNegative() {
         averageCar.turnOn();
-        averageCar.setSpeed(-10);
-        assertEquals(0, averageCar.getSpeed());
+        averageCar.setSpeed(-10.0);
+        assertEquals(0.0, averageCar.getSpeed());
     }
 
     @Test
@@ -307,9 +307,9 @@ public class AverageCarTest {
 
     @Test
     public void checkDashboardCarOff() {
-        assertEquals("Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0
+        assertEquals("Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
                 + ", totalDistance="
-                + 0 + ", distanceFromHome=" + 0 + ", currentGear=" + GEAR.PARK, averageCar.checkDashboard());
+                + 0.0 + ", distanceFromHome=" + 0.0 + ", currentGear=" + GEAR.PARK, averageCar.checkDashboard());
     }
 
     @Test
@@ -326,9 +326,9 @@ public class AverageCarTest {
         averageCar.gas(2);
         averageCar.drive(5);
         averageCar.turnOnHeadlights();
-        assertEquals("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10
+        assertEquals("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10.0
                 + ", totalDistance="
-                + 650 + ", distanceFromHome=" + 50 + ", currentGear=" + GEAR.FORWARD, averageCar.checkDashboard());
+                + 650.0 + ", distanceFromHome=" + 50.0 + ", currentGear=" + GEAR.FORWARD, averageCar.checkDashboard());
     }
 
     @Test

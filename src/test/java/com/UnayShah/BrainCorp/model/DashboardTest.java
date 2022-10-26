@@ -11,9 +11,9 @@ public class DashboardTest {
 
     Boolean engine = Boolean.TRUE;
     Boolean headlights = Boolean.FALSE;
-    Integer speed = 100;
-    Integer totalDistance = 100;
-    Integer distanceFromHome = 100;
+    Double speed = 100.0;
+    Double totalDistance = 100.0;
+    Double distanceFromHome = 100.0;
     GEAR currentGear = GEAR.FORWARD;
 
     @BeforeEach

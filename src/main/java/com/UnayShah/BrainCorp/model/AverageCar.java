@@ -4,25 +4,25 @@ package com.UnayShah.BrainCorp.model;
  * Class to setup common functions for a car.
  */
 public class AverageCar {
-    protected Integer maxSpeed = 50;
-    protected Integer accelaration = 5;
-    protected Integer brakeEfficiency = -10;
-    protected Integer speed = 0;
-    protected Integer distance = 0;
-    protected Integer distanceFromHome = 0;
+    protected Double maxSpeed;
+    protected Double accelaration;
+    protected Double brakeEfficiency;
+    protected Double speed;
+    protected Double distance;
+    protected Double distanceFromHome;
 
-    protected Boolean carOn = Boolean.FALSE;
-    protected Boolean headlights = Boolean.FALSE;
+    protected Boolean carOn;
+    protected Boolean headlights;
     protected Dashboard dashboard;
-    private GEAR currentGear = GEAR.PARK;
+    private GEAR currentGear;
 
     public AverageCar() {
-        this.maxSpeed = 50;
-        this.accelaration = 5;
-        this.brakeEfficiency = -10;
-        this.speed = 0;
-        this.distance = 0;
-        this.distanceFromHome = 0;
+        this.maxSpeed = 50.0;
+        this.accelaration = 5.0;
+        this.brakeEfficiency = -10.0;
+        this.speed = 0.0;
+        this.distance = 0.0;
+        this.distanceFromHome = 0.0;
 
         this.carOn = Boolean.FALSE;
         this.headlights = Boolean.FALSE;
@@ -30,7 +30,7 @@ public class AverageCar {
         this.currentGear = GEAR.PARK;
     }
 
-    protected void setSpeed(Integer speed) {
+    protected void setSpeed(Double speed) {
         if (this.isCarOn())
             this.speed = Math.max(Math.min(speed, this.maxSpeed), 0);
         if (this.speed == 0)
@@ -48,25 +48,25 @@ public class AverageCar {
         return this.currentGear;
     }
 
-    public Integer getSpeed() {
+    public Double getSpeed() {
         return this.speed;
     }
 
-    public Integer getDistance() {
+    public Double getDistance() {
         return this.distance;
     }
 
-    public Integer getDistanceFromHome() {
+    public Double getDistanceFromHome() {
         return this.distanceFromHome;
     }
 
     public void turnOn() {
         this.carOn = true;
-        this.distanceFromHome = 0;
+        this.distanceFromHome = 0.0;
     }
 
     public void turnOff() {
-        if (this.getSpeed() == 0)
+        if (this.getSpeed() == 0.0)
             this.carOn = false;
     }
 
@@ -76,22 +76,22 @@ public class AverageCar {
 
     public void gas(Integer time) {
         if (this.isCarOn()) {
-            Integer newSpeed = this.getSpeed() + (this.brakeEfficiency * time);
+            Double newSpeed = this.getSpeed() + (this.brakeEfficiency * time);
             if (newSpeed < 0)
-                newSpeed = 0;
+                newSpeed = 0.0;
             if (newSpeed > 50)
-                newSpeed = 50;
+                newSpeed = 50.0;
             this.setSpeed(this.getSpeed() + (this.accelaration * time));
         }
     }
 
     public void brake(Integer time) {
         if (this.isCarOn()) {
-            Integer newSpeed = this.getSpeed() + (this.brakeEfficiency * time);
+            Double newSpeed = this.getSpeed() + (this.brakeEfficiency * time);
             if (newSpeed < 0)
-                newSpeed = 0;
+                newSpeed = 0.0;
             if (newSpeed > 50)
-                newSpeed = 50;
+                newSpeed = 50.0;
             this.setSpeed(this.getSpeed() + (this.brakeEfficiency * time));
         }
     }

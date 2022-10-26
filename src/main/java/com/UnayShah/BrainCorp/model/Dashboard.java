@@ -3,12 +3,12 @@ package com.UnayShah.BrainCorp.model;
 public class Dashboard {
     Boolean engine;
     Boolean headlights;
-    Integer speed;
-    Integer totalDistance;
-    Integer distanceFromHome;
+    Double speed;
+    Double totalDistance;
+    Double distanceFromHome;
     GEAR currentGear;
 
-    public Dashboard(Boolean engine, Boolean headlights, Integer speed, Integer totalDistance, Integer distanceFromHome,
+    public Dashboard(Boolean engine, Boolean headlights, Double speed, Double totalDistance, Double distanceFromHome,
             GEAR currentGear) {
         this.engine = engine;
         this.headlights = headlights;
@@ -19,11 +19,11 @@ public class Dashboard {
     }
 
     public Dashboard() {
-        this(Boolean.FALSE, Boolean.FALSE, 0, 0, 0, GEAR.PARK);
+        this(Boolean.FALSE, Boolean.FALSE, 0.0, 0.0, 0.0, GEAR.PARK);
     }
 
-    public void setDashboard(Boolean engine, Boolean headlights, Integer speed, Integer totalDistance,
-            Integer distanceFromHome,
+    public void setDashboard(Boolean engine, Boolean headlights, Double speed, Double totalDistance,
+            Double distanceFromHome,
             GEAR currentGear) {
         this.engine = engine;
         this.headlights = headlights;
@@ -34,7 +34,7 @@ public class Dashboard {
     }
 
     public void setDashboard() {
-        this.setDashboard(Boolean.FALSE, Boolean.FALSE, 0, 0, 0, GEAR.PARK);
+        this.setDashboard(Boolean.FALSE, Boolean.FALSE, 0.0, 0.0, 0.0, GEAR.PARK);
     }
 
     public String checkDashboard() {
