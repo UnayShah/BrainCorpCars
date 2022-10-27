@@ -89,13 +89,13 @@ public class FastCarTest {
     }
 
     @Test
-    public void testBreakCarOff() {
+    public void testBrakeCarOff() {
         fastCar.brake(3);
         assertEquals(0, fastCar.getSpeed());
     }
 
     @Test
-    public void testBreak() {
+    public void testBrake() {
         fastCar.turnOn();
         fastCar.gas(8);
         assertEquals(8 * accelaration, fastCar.getSpeed());
@@ -104,7 +104,7 @@ public class FastCarTest {
     }
 
     @Test
-    public void testBreakExceedSpeed() {
+    public void testBrakeExceedSpeed() {
         fastCar.turnOn();
         fastCar.gas(20);
         fastCar.brake(10);
@@ -112,7 +112,7 @@ public class FastCarTest {
     }
 
     @Test
-    public void testBreakExceedBrake() {
+    public void testBrakeExceedBrake() {
         fastCar.turnOn();
         fastCar.gas(20);
         fastCar.brake(20);
@@ -312,7 +312,7 @@ public class FastCarTest {
 
     @Test
     public void checkDashboardCarOff() {
-        assertEquals("Fast Car Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
+        assertEquals("Fast Car Dashboard engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
                 + ", totalDistance="
                 + 0.0 + ", distanceFromHome=" + 0.0 + ", currentGear=" + GEAR.PARK, fastCar.checkDashboard());
     }
@@ -332,7 +332,7 @@ public class FastCarTest {
         fastCar.drive(5);
         fastCar.turnOnHeadlights();
         assertEquals(
-                "Fast Car Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed="
+                "Fast Car Dashboard engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed="
                         + (2 * accelaration)
                         + ", totalDistance="
                         + (maxSpeed * 10 + 1400 + 2 * accelaration * 5) + ", distanceFromHome=" + (2 * accelaration * 5)

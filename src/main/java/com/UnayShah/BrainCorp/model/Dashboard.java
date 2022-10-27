@@ -38,7 +38,7 @@ public class Dashboard {
     }
 
     public String checkDashboard() {
-        return "Dashboard [engine=" + engine + ", headlights=" + headlights + ", speed=" + speed + ", totalDistance="
+        return "Dashboard engine=" + engine + ", headlights=" + headlights + ", speed=" + speed + ", totalDistance="
                 + totalDistance + ", distanceFromHome=" + distanceFromHome + ", currentGear=" + currentGear;
     }
 

@@ -14,7 +14,7 @@ public class AverageCar {
     protected Boolean carOn;
     protected Boolean headlights;
     protected Dashboard dashboard;
-    private GEAR currentGear;
+    protected GEAR currentGear;
 
     public AverageCar() {
         this.maxSpeed = 50.0;
@@ -97,8 +97,10 @@ public class AverageCar {
     }
 
     public void drive(Integer time) {
-        this.distance += time * speed;
-        this.distanceFromHome += time * speed;
+        if (this.isCarOn()) {
+            this.distance += time * speed;
+            this.distanceFromHome += time * speed;
+        }
     }
 
     public void turnOnHeadlights() {

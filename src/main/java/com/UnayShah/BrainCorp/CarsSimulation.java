@@ -1,6 +1,8 @@
 package com.UnayShah.BrainCorp;
 
+import com.UnayShah.BrainCorp.model.FancyCar;
 import com.UnayShah.BrainCorp.model.FastCar;
+import com.UnayShah.BrainCorp.model.GEAR;
 import com.UnayShah.BrainCorp.model.SlowCar;
 
 public class CarsSimulation {
@@ -16,6 +18,21 @@ public class CarsSimulation {
         fastCar.brake(3);
         fastCar.turnOff();
         fastCar.checkDashboard();
+
+        FancyCar fancyCar = new FancyCar();
+        fancyCar.turnOn();
+        fancyCar.turnOnHeadlights();
+        fancyCar.gas(11);
+        fancyCar.drive(30);
+        fancyCar.brake(5);
+        fancyCar.drive(3);
+        fancyCar.brake(1);
+        fancyCar.setCurrentGear(GEAR.REVERSE);
+        fancyCar.gas(20);
+        fancyCar.drive(30);
+        fancyCar.turnOffHeadlights();
+        fancyCar.checkDashboard();
+        fancyCar.horn();
 
         SlowCar slowCar = new SlowCar();
         slowCar.turnOn();

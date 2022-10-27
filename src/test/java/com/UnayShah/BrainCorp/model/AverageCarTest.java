@@ -86,13 +86,13 @@ public class AverageCarTest {
     }
 
     @Test
-    public void testBreakCarOff() {
+    public void testBrakeCarOff() {
         averageCar.brake(3);
         assertEquals(0, averageCar.getSpeed());
     }
 
     @Test
-    public void testBreak() {
+    public void testBrake() {
         averageCar.turnOn();
         averageCar.gas(5);
         assertEquals(5 * 5, averageCar.getSpeed());
@@ -101,7 +101,7 @@ public class AverageCarTest {
     }
 
     @Test
-    public void testBreakExceedSpeed() {
+    public void testBrakeExceedSpeed() {
         averageCar.turnOn();
         averageCar.gas(20);
         averageCar.brake(3);
@@ -109,7 +109,7 @@ public class AverageCarTest {
     }
 
     @Test
-    public void testBreakExceedBrake() {
+    public void testBrakeExceedBrake() {
         averageCar.turnOn();
         averageCar.gas(20);
         averageCar.brake(10);
@@ -307,7 +307,7 @@ public class AverageCarTest {
 
     @Test
     public void checkDashboardCarOff() {
-        assertEquals("Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
+        assertEquals("Dashboard engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
                 + ", totalDistance="
                 + 0.0 + ", distanceFromHome=" + 0.0 + ", currentGear=" + GEAR.PARK, averageCar.checkDashboard());
     }
@@ -326,7 +326,7 @@ public class AverageCarTest {
         averageCar.gas(2);
         averageCar.drive(5);
         averageCar.turnOnHeadlights();
-        assertEquals("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10.0
+        assertEquals("Dashboard engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + 10.0
                 + ", totalDistance="
                 + 650.0 + ", distanceFromHome=" + 50.0 + ", currentGear=" + GEAR.FORWARD, averageCar.checkDashboard());
     }

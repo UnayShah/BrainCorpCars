@@ -24,10 +24,10 @@ public class DashboardTest {
     @Test
     public void testDashboardWithValues() {
         assertEquals(dashboard.checkDashboard(),
-                "Dashboard [engine=" + engine + ", headlights=" + headlights + ", speed=" + speed + ", totalDistance="
+                "Dashboard engine=" + engine + ", headlights=" + headlights + ", speed=" + speed + ", totalDistance="
                         + totalDistance + ", distanceFromHome=" + distanceFromHome + ", currentGear=" + currentGear);
         assertNotEquals(dashboard.checkDashboard(),
-                "Dashboard [engine=" + !engine + ", headlights=" + headlights + ", speed=" + (speed + 1)
+                "Dashboard engine=" + !engine + ", headlights=" + headlights + ", speed=" + (speed + 1)
                         + ", totalDistance="
                         + totalDistance + ", distanceFromHome=" + distanceFromHome + ", currentGear=" + currentGear);
     }
