@@ -116,6 +116,7 @@ public class AverageCar {
     public String checkDashboard() {
         this.dashboard.setDashboard(this.carOn, this.headlights, this.speed, this.distance, this.distanceFromHome,
                 this.currentGear);
+        System.out.println(this.dashboard.checkDashboard());
         return this.dashboard.checkDashboard();
     }
 }

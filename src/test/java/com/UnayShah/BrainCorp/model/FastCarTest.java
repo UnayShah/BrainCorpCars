@@ -312,7 +312,7 @@ public class FastCarTest {
 
     @Test
     public void checkDashboardCarOff() {
-        assertEquals("Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
+        assertEquals("Fast Car Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
                 + ", totalDistance="
                 + 0.0 + ", distanceFromHome=" + 0.0 + ", currentGear=" + GEAR.PARK, fastCar.checkDashboard());
     }
@@ -332,7 +332,8 @@ public class FastCarTest {
         fastCar.drive(5);
         fastCar.turnOnHeadlights();
         assertEquals(
-                "Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + (2 * accelaration)
+                "Fast Car Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed="
+                        + (2 * accelaration)
                         + ", totalDistance="
                         + (maxSpeed * 10 + 1400 + 2 * accelaration * 5) + ", distanceFromHome=" + (2 * accelaration * 5)
                         + ", currentGear=" + GEAR.FORWARD,

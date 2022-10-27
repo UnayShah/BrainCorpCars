@@ -307,7 +307,7 @@ public class SlowCarTest {
 
     @Test
     public void checkDashboardCarOff() {
-        assertEquals("Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
+        assertEquals("Slow Car Dashboard [engine=" + Boolean.FALSE + ", headlights=" + Boolean.FALSE + ", speed=" + 0.0
                 + ", totalDistance="
                 + 0.0 + ", distanceFromHome=" + 0.0 + ", currentGear=" + GEAR.PARK, slowCar.checkDashboard());
     }
@@ -326,9 +326,11 @@ public class SlowCarTest {
         slowCar.gas(2);
         slowCar.drive(5);
         slowCar.turnOnHeadlights();
-        assertEquals("Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + (2 * 3.75)
-                + ", totalDistance="
-                + (375 + 175 + 2 * 3.75 * 5) + ", distanceFromHome=" + (2 * 3.75 * 5) + ", currentGear=" + GEAR.FORWARD,
+        assertEquals(
+                "Slow Car Dashboard [engine=" + Boolean.TRUE + ", headlights=" + Boolean.TRUE + ", speed=" + (2 * 3.75)
+                        + ", totalDistance="
+                        + (375 + 175 + 2 * 3.75 * 5) + ", distanceFromHome=" + (2 * 3.75 * 5) + ", currentGear="
+                        + GEAR.FORWARD,
                 slowCar.checkDashboard());
     }
 

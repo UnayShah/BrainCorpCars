@@ -7,4 +7,9 @@ public class FastCar extends AverageCar {
         this.maxSpeed = 150.0;
         this.brakeEfficiency = -10.0;
     }
+    @Override
+    public String checkDashboard() {
+        System.out.print("Fast Car ");
+        return "Fast Car " + super.checkDashboard();
+    }
 }

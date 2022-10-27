@@ -7,4 +7,10 @@ public class SlowCar extends AverageCar {
         this.maxSpeed = 37.5;
         this.brakeEfficiency = -20.0;
     }
+
+    @Override
+    public String checkDashboard() {
+        System.out.print("Slow Car ");
+        return "Slow Car " + super.checkDashboard();
+    }
 }
